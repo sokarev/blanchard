@@ -269,7 +269,7 @@ body {
     background: rgba(0, 0, 0, .6);
     position: absolute;
     top: 46px;
-    padding: 40px;
+    padding: 40px 19px 40px 40px;
     opacity: 0;
     visibility: hidden;
     transform: scale(0.8) translate(-50px, -20px);
@@ -289,9 +289,8 @@ body {
 }
 
 .dropdown .simplebar-track.simplebar-vertical {
-    background-color: grey;
+    background-color: #000;
     width: 2px;
-    margin-right: 10px;
 }
 
 .dropdown .simplebar-scrollbar {
@@ -319,8 +318,8 @@ body {
 }
 
 .dropdown__list {
-    height: 300px;
-    overflow: hidden;
+    height: 220px;
+    overflow: auto;
 }
 
 .form {
@@ -541,6 +540,17 @@ body {
     color: var(--color-white);
 }
 
+.gallery__inner {
+    justify-content: space-between;
+    min-width: 0;
+}
+
+.gallery__filter {
+    width: 100%;
+    max-width: 400px;
+    margin-right: 50px;
+}
+
 .gallery__text {
     line-height: 32px;
     color: var(--color-white);
@@ -548,8 +558,72 @@ body {
     display: inline-block;
 }
 
+.gallery__swiper {
+    max-width: 1150px;
+    overflow: hidden;
+    padding-top: 25px;
+}
+
+.gallery__swiper-control {
+    justify-content: space-between;
+    position: relative;
+    width: 130px;
+    height: 30px;
+    margin-bottom: 30px;
+}
+
+.swiper-btn-prev,
+.swiper-btn-next {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #666;
+    position: relative;
+    z-index: 11;
+    cursor: pointer;
+}
+
+.swiper-btn-prev::before,
+.swiper-btn-next::before {
+    position: absolute;
+    content: "";
+    width: 9px;
+    height: 9px;
+    box-shadow: -1px 1px 0 white;
+    margin-left: 4px;
+    margin-bottom: 3px;
+    top: 10px;
+}
+
+.swiper-btn-prev::before {
+    left: 11px;
+    transform: rotate(45deg);
+}
+
+.swiper-btn-next::before {
+    left: 4px;
+    transform: rotate(-135deg);
+}
+
+.swiper-btn-prev.swiper-button-disabled,
+.swiper-btn-next.swiper-button-disabled {
+    opacity: 0.5;
+    cursor: auto;
+}
+
+.swiper-pagination {
+    position: absolute;
+    text-align: center;
+    color: #fff;
+    line-height: 32px;
+}
+
+.swiper-pagination-fraction {
+    bottom: 0;
+}
+
 .choices {
-    max-width: 400px;
+    width: 100%;
     line-height: 32px;
     color: var(--color-white);
 }
@@ -594,9 +668,6 @@ body {
     display: none;
 }
 
-.gallery__swiper {
-    max-width: 1150px;
-}
 
 /* .choices__list--dropdown .choices__item--selectable.is-highlighted,
 .choices__list[aria-expanded] .choices__item--selectable.is-highlighted {
@@ -624,4 +695,11 @@ body {
     margin-right: 9px;
     width: 22px;
     height: 21px;
+}
+
+
+/* event */
+
+.events__title {
+    margin-bottom: 16px;
 }
