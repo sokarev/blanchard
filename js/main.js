@@ -1,6 +1,27 @@
-// const hero__container = document.querySelector(".hero__container")
+const smoothLinks = document.querySelectorAll('.nav__list-link');
+for (let smoothLink of smoothLinks) {
+    smoothLink.addEventListener('click', function(e) {
+        e.preventDefault();
+        const id = smoothLink.getAttribute('href');
+
+        document.querySelector(id).scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+    });
+};
+
+$(window).scroll(function() {
+    if ($(this).scrollTop() > window.innerHeight * 0.75) {
+        $(".header").fadeIn();
+        $(".header").addClass('fixed')
+    } else {
+        $(".header").removeClass('fixed')
+    }
+});
+
 const swiperHero = new Swiper('.hero__swiper', {
-    // Default parameters
+
     slidesPerView: 1,
     spaceBetween: 10,
     speed: 2000,
@@ -18,30 +39,17 @@ const swiperHero = new Swiper('.hero__swiper', {
         type: 'bullets',
         clickable: true
     }
-
 });
 
 const swiperGallery = new Swiper('.gallery-container', {
     slidesPerView: 3,
     slidesPerGroup: 3,
     spaceBetween: 50,
-    loop: true,
-    // slidesPerView: 'auto',
-    // direction: 'vertical',
-    // loop: true,
-    // slidesPerGroup: 3,
-    // keyboard: {
-    //     enabled: true,
-    //     onlyInViewport: true,
-    //     pageUpDown: true,
-
-    // },
-
-    // spaceBetween: 30,
     pagination: {
         el: ".gallery-pagination",
-        // clickable:true,
         type: 'fraction',
+        clickable: true
+
     },
     navigation: {
         nextEl: ".gallery-next",
@@ -84,25 +92,21 @@ const swiperGallery = new Swiper('.gallery-container', {
 
 });
 
-const swiperEvent = new Swiper('.swiper__event', {
+const swiperEvent = new Swiper('.swiper-event', {
     slidesPerView: 3,
     slidesPerGroup: 1,
     spaceBetween: 50,
-    // loop: true,
-
     navigation: {
-        nextEl: ".catalog__swiper-next",
-        prevEl: ".catalog__swiper-prev"
+        nextEl: ".event__swiper-next",
+        prevEl: ".event__swiper-prev"
     },
 
 });
-
 
 const swiperProject = new Swiper('.project__swiper', {
     slidesPerView: 3,
     slidesPerGroup: 1,
     spaceBetween: 50,
-    // loop: true,
 
     navigation: {
         nextEl: ".project__btn-next",
@@ -111,25 +115,20 @@ const swiperProject = new Swiper('.project__swiper', {
 
 });
 
-
 document.querySelectorAll(".dropdown__list").forEach(dropdown__list => {
     new SimpleBar(dropdown__list, {
-        /* чтобы изначально ползунок был виден */
         autoHide: false,
-        /* с помощью этого значения вы можете управлять высотой ползунка*/
         scrollbarMaxSize: 25,
     });
 })
 
-
-
 document.addEventListener("DOMContentLoaded", function() {
-    document.querySelectorAll(".submenu__btn").forEach(item => {
+    document.querySelectorAll(".header__btn").forEach(item => {
         item.addEventListener("click", function() {
             let btn = this;
             let dropdown = this.parentElement.querySelector(".dropdown");
 
-            document.querySelectorAll(".submenu__btn").forEach(el => {
+            document.querySelectorAll(".header__btn").forEach(el => {
                 if (el != btn) {
                     el.classList.remove("active-btn");
                 }
@@ -149,31 +148,32 @@ document.addEventListener("DOMContentLoaded", function() {
 
     document.addEventListener("click", function(e) {
         let target = e.target;
-        if (!target.closest(".submenu__list-item")) {
+        if (!target.closest(".header__list-item")) {
             document.querySelectorAll(".dropdown").forEach(el => {
                 el.classList.remove("active-dropdown");
             })
-            document.querySelectorAll(".submenu__btn").forEach(el => {
+            document.querySelectorAll(".header__btn").forEach(el => {
                 el.classList.remove("active-btn");
             });
-
         }
-
     })
-
-
-    // document.addEventListener('click', function(e) {
-    //     if (e.target.matches('.dropdown__link')) {
-    //         document.querySelectorAll(".dropdown").classList.remove('active-dropdown');
-    //         document.querySelectorAll(".submenu__btn").classList.remove('active-btn');
-    //     }
-    // });
-
-
-
 })
 
+let tabsBtn = document.querySelectorAll('.catalog__list-autor');
+let tabsItem = document.querySelectorAll('.catalog__painter-item');
 
+tabsBtn.forEach(function(el) {
+    el.addEventListener('click', function(e) {
+        const path = e.currentTarget.dataset.path;
+
+        tabsBtn.forEach(function(btn) { btn.classList.remove('catalog__list-autor--active') });
+        e.currentTarget.classList.add('catalog__list-autor--active');
+
+        tabsItem.forEach(function(el) { el.classList.remove('catalog__painter-item--active') });
+        document.querySelector(`[data-target="${path}"]`).classList.add('catalog__painter-item--active');
+
+    })
+})
 
 const element = document.querySelector('.gallery__select');
 const choices = new Choices(element, {
@@ -181,28 +181,44 @@ const choices = new Choices(element, {
     itemSelectText: [],
 });
 
-$(function() {
-    $("#accordion").accordion({
+// Перебираем каждый элемент шапки
+document.querySelectorAll('.catalog__list-btn').forEach(function(trigger) {
+    // Получаем родителя, элемент аккордеона
+    var parent = trigger.closest('.catalog__list-item');
 
-        heightStyle: "content",
-        header: '>.catalog__list-item >.catalog__list-btn',
-        active: 0,
-        collapsible: true
+    // клик по шапке
+    trigger.addEventListener('click', function(e) {
 
-    });
-
+        // если при клике у него уже есть активный класс 
+        if (parent.classList.contains('active')) {
+            // то мы его удаляем
+            parent.classList.remove('active');
+        }
+        // если при клике мы не нашли у элемента активный класс
+        else {
+            // удаляем у всех элементов активный класс
+            document.querySelectorAll('.catalog__list-item').forEach(function(item) {
+                item.classList.remove('active');
+            });
+            // добавляем класс тому элементу, по которому кликнули
+            parent.classList.add('active');
+        }
+    })
 });
-$(function() {
-    $("#accordion").accordion({
 
-        heightStyle: "content",
-        header: '>.catalog__list-autor >.catalog__painter-item',
-        active: 0,
-        collapsible: true
+document.querySelector('.catalog__list-inner').addEventListener('click', (event) => {
+    let target = event.target;
 
-    });
-
+    if (target.classList.contains('menu__item')) {
+        for (let i = 0; i < menuItem.length; i++) {
+            // Убираем у других
+            parent.querySelectorAll('.catalog__list-item')[i].classList.remove('active');
+        }
+        // Добавляем тому на который нажали
+        target.classList.add('active');
+    }
 });
+
 ymaps.ready(init);
 
 function init() {
@@ -237,3 +253,49 @@ function init() {
     myMap.geoObjects.add(myPlacemark);
     myMap.container.fitToViewport();
 }
+
+let popup = document.querySelector('.popup');
+let openPopupButtons = document.querySelectorAll('.popup-link');
+let popupBody = document.querySelector('.popup__body');
+let popupClose = document.querySelector('.popup__close');
+
+openPopupButtons.forEach((el) => {
+    el.addEventListener('click', (e) => {
+        // e.target - целевой элемент
+        popup.classList.add('open');
+
+        let imgSrc = e.target.querySelector('.gallery-image').src;
+        let popupBox = document.querySelector('.popup__content');
+        let title = e.target.querySelector('h3').innerHTML;
+        let desc = e.target.querySelector('.swiper-box__desc').innerHTML;
+        let date = e.target.querySelector('.swiper-box__date').innerHTML;
+        let text = e.target.querySelector('.swiper-box__text').innerHTML;
+
+        let popBox = `
+                <a class="popup__close" href="#">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666641 15.3043L15.3333 3.17761e-05L16 0.695679L1.33331 15.9999L0.666641 15.3043Z" fill="black"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666725 -2.96187e-06L15.3334 15.3042L14.6667 15.9999L5.76143e-05 0.695644L0.666725 -2.96187e-06Z" fill="black"/>
+                    </svg>
+                </a>
+                 <picture class="popup__picture">
+                    <img class="popup__img" src="${imgSrc}" alt="">
+                  </picture>
+
+                <div class="popup__box">
+                    <h3 class="popup__title">${title}</h3>
+                    <span class="popup__desc"> ${desc}</span>
+                    <span class="popup__date"> ${date}</span>
+
+                    <p class="popup__text">${text}</p>
+                </div>`;
+        popupBox.innerHTML = popBox;
+    });
+});
+
+document.addEventListener('click', function(event) {
+    if (event.target === popupBody || event.target.className === 'popup__close') {
+        event.preventDefault();
+        popup.classList.remove('open');
+    };
+});

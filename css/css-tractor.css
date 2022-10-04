@@ -1,0 +1,430 @@
+html {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+}
+
+picture {
+    font-size: 0;
+}
+
+:root {
+    --color-black: #000;
+    --color-dark-shade-gray: #333;
+    --color-medium-dark-shade-gray: #666;
+    --color-medium-light-shade-gray: #999;
+    --color-light-shade-purple-blue: #D1A9F0;
+    --accent: #9D5CD0;
+    --color-medium-light-shade-purple-blue: #C283F3;
+    --color-white: #fff;
+    --color-shade-purple-blue: #7943A4;
+    --color-green: #30BF39;
+    --color-blue: #26A5E4;
+    --color-red: #D11616;
+    --color--gray: #CACACA;
+    --color-light-shade-gray: #ECECEC;
+}
+
+.list-reset {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.btn-reset {
+    padding: 0;
+    outline: 0;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    font-size: 0;
+}
+
+.flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.title {
+    margin: 0 0 16px;
+    font-size: 48px;
+    line-height: 65px;
+    font-weight: 400;
+    color: var(--color);
+}
+
+.subbtitle {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    color: var(--color);
+}
+
+.section-offset {
+    padding: 80px 0;
+}
+
+body {
+    color: var(--color);
+    background-color: var(--color-white);
+    font-family: 'OpenSans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    position: relative;
+}
+
+.container {
+    max-width: 1630px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.header {
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+    opacity: 1;
+    visibility: visible;
+}
+
+.header__menu {}
+
+.container {}
+
+.flex {}
+
+.header__menu-container {}
+
+.logo {}
+
+.logotype {}
+
+.nav {}
+
+.nav__list {}
+
+.list-reset {}
+
+.nav__list-item {}
+
+.nav__list-link {}
+
+.wrappcolor {}
+
+.header__admin {}
+
+.header__icon {}
+
+.header__submenu {}
+
+.header__submenu-container {}
+
+.header__list {}
+
+.header__list-item {}
+
+.header__btn {}
+
+.btn-reset {}
+
+.arrow-down {}
+
+.dropdown {}
+
+.dropdown__list {}
+
+.dropdown__item {}
+
+.dropdown__link {}
+
+.dropdown__link-color {}
+
+.header__dropdown-wrap {}
+
+.form {}
+
+.form__btn {}
+
+.search {}
+
+.form__input {}
+
+.main {}
+
+.hero {}
+
+.hero__swiper {}
+
+.swiper-wrapper {}
+
+.swiper-slide {}
+
+.hero-slide {}
+
+.hero__container {}
+
+.hero__title {}
+
+.hero__text {}
+
+.hero__btn {}
+
+.about {}
+
+.section-offset {}
+
+.about__inner {}
+
+.title {}
+
+.about__title {}
+
+.about__text {}
+
+.gallery {}
+
+.gallery__inner {}
+
+.gallery__filter {}
+
+.gallery__title {}
+
+.gallery__text {}
+
+.gallery__select {}
+
+.gallery__option {}
+
+.gallery__checkbox {}
+
+.gallery__input {}
+
+.gallery__label {}
+
+.gallery-swiper {}
+
+.gallery-navigation {}
+
+.nav-btn {}
+
+.gallery-prev {}
+
+.gallery-pagination {}
+
+.gallery-next {}
+
+.swiper-container {}
+
+.gallery-container {}
+
+.slides-container {}
+
+.swiper-item {}
+
+.gallery-slide {}
+
+.popup-link {}
+
+.swiper-btn {}
+
+.gallery-image {}
+
+.swiper-box {}
+
+.swiper-box__title {}
+
+.swiper-box__desc {}
+
+.swiper-box__date {}
+
+.swiper-box__text {}
+
+.catalog {}
+
+.catalog__title {}
+
+.catalog__text {}
+
+.catalog__inner {}
+
+.catalog__painter {}
+
+.catalog__painter-item {}
+
+.catalog__painter-item--active {}
+
+.catalog__img {}
+
+.catalog__painter-title {}
+
+.catalog__painter-date {}
+
+.catalog__painter-text {}
+
+.catalog__painter-link {}
+
+.catalog__list {}
+
+.catalog__list-inner {}
+
+.js-accordion-container {}
+
+.catalog__list-item {}
+
+.active {}
+
+.catalog__list-btn {}
+
+.catalog__list-date {}
+
+.catalog__nav-btn {}
+
+.catalog__list-content {}
+
+.catalog__list-listing {}
+
+.catalog__list-autor {}
+
+.catalog__list-autor--active {}
+
+.catalog__list-pattern {}
+
+.catalog__list-pic {}
+
+.catalog__list-box {}
+
+.catalog__list-title {}
+
+.catalog__list-text {}
+
+.catalog__list-link {}
+
+.event {}
+
+.event__title {}
+
+.swiper-object {}
+
+.event__inner {}
+
+.swiper-event {}
+
+.event__list {}
+
+.event__item {}
+
+.event__box {}
+
+.event__img {}
+
+.event__box-content {}
+
+.event__box-name {}
+
+.event__box-date {}
+
+.event__box-title {}
+
+.event__box-text {}
+
+.event__box-link {}
+
+.event__nav-btn {}
+
+.event__swiper-prev {}
+
+.event__swiper-next {}
+
+.project {}
+
+.project__title {}
+
+.project__text {}
+
+.project__tooltip {}
+
+.project__icon {}
+
+.project__tooltiptext {}
+
+.project__link {}
+
+.project__partners {}
+
+.project__object {}
+
+.project__swiper {}
+
+.project__wrapper {}
+
+.project__slide {}
+
+.project__slide-img {}
+
+.project__btn-prev {}
+
+.project__btn-next {}
+
+.contact {}
+
+.contact__inner {}
+
+.address {}
+
+.contact__strong {}
+
+.contact__form {}
+
+.contact__input {}
+
+.contact__btn {}
+
+.social {}
+
+.social__icons {}
+
+.social__item {}
+
+.social__link {}
+
+.social__icon {}
+
+.social__whatapp {}
+
+.social__telega {}
+
+.contact__map {}
+
+.contact__map-wrap {}
+
+.footer {}
+
+.footer__inner {}
+
+.footer__social {}
+
+.footer__link {}
+
+.footer__icon {}
+
+.popup {}
+
+.popup__body {}
+
+.popup__content {}
