@@ -96,6 +96,8 @@ const swiperEvent = new Swiper('.swiper-event', {
     slidesPerView: 3,
     slidesPerGroup: 1,
     spaceBetween: 50,
+    a11y: true,
+
     navigation: {
         nextEl: ".event__swiper-next",
         prevEl: ".event__swiper-prev"
@@ -107,6 +109,7 @@ const swiperProject = new Swiper('.project__swiper', {
     slidesPerView: 3,
     slidesPerGroup: 1,
     spaceBetween: 50,
+    a11y: true,
 
     navigation: {
         nextEl: ".project__btn-next",
@@ -179,6 +182,7 @@ const element = document.querySelector('.gallery__select');
 const choices = new Choices(element, {
     searchEnabled: false,
     itemSelectText: [],
+
 });
 
 // Перебираем каждый элемент шапки
@@ -299,3 +303,45 @@ document.addEventListener('click', function(event) {
         popup.classList.remove('open');
     };
 });
+const selector = document.querySelector("input[type='tel']");
+const im = new Inputmask("+7(999) 999-99-99");
+im.mask(selector);
+
+
+let validation = new JustValidate('#form', {
+    errorFieldCssClass: 'is-invalid',
+    errorFieldStyle: {
+        border: '3px solid blue',
+    },
+    errorLabelCssClass: 'is-label-invalid',
+    errorLabelStyle: {
+        color: '#D11616',
+        fontSize: '12px',
+        fontFamily: '14px',
+        paddingBottom: '5px',
+
+    },
+
+});
+validation
+    .addField('#name', [{
+            rule: 'required',
+            errorMessage: 'Как вас зовут?',
+        },
+        {
+            rule: 'minLength',
+            value: 3,
+            errorMessage: 'Поле должно содержать не менее 3 символов',
+        },
+        {
+            rule: 'maxLength',
+            value: 30,
+            errorMessage: 'Слишком длинное имя',
+        },
+    ])
+
+
+.addField('#phone', [{
+    rule: 'required',
+    errorMessage: 'Укажите ваш телефон',
+}, ]);

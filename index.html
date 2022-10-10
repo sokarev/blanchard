@@ -200,7 +200,8 @@
                         <h2 class="title gallery__title">Галерея</h2>
                         <span class="gallery__text">Фильтр:</span>
                         <select class="gallery__select" name="select" id="selectGallery">
-                            <option class="gallery__option">Живопись</option>
+                            <!-- <option class="gallery__option">Живопись</option> -->
+                            <option class="gallery__option" value="" selected>Живопись</option>
                             <option class="gallery__option" value="">Рисунок</option>
                             <option class="gallery__option" value="">Скульптура</option>
                         </select>
@@ -748,10 +749,11 @@
                 </div>
                 <span class="project__partners"> Партнёры проектов: </span>
                 <div class="project__object">
+                    <div class="nav-btn project__btn project__btn-next"></div>
+                    <div class="nav-btn project__btn project__btn-prev"></div>
                     <div class="project__swiper">
-                        <!-- Additional required wrapper -->
+
                         <div class="project__wrapper swiper-wrapper">
-                            <!-- Slides -->
                             <a class="project__slide swiper-slide" href="#"><img class="project__slide-img" src="img/partners/1.png" alt=""></a>
                             <a class="project__slide swiper-slide" href="#"><img class="project__slide-img" src="img/partners/2.png" alt=""></a>
                             <a class="project__slide swiper-slide" href="#"><img class="project__slide-img" src="img/partners/3.png" alt=""></a>
@@ -764,12 +766,8 @@
 
                         </div>
                     </div>
-                    <!-- If we need pagination -->
 
 
-                    <!-- If we need navigation buttons -->
-                    <div class="nav-btn project__btn-prev"></div>
-                    <div class="nav-btn project__btn-next"></div>
                 </div>
 
             </div>
@@ -780,11 +778,18 @@
                     <address class="address"> <p class="contact__strong">Шоурум №4</p> 
                         Леонтьевский переулок, дом 5/1
                     </address>
-                    <form action="" class="contact__form">
-                        <input class="contact__input" type="text" name="" id="" placeholder="Имя*">
-                        <input class="contact__input" type="email" name="" id="" placeholder="Телефон*">
-                        <button class="contact__btn btn-reset">Заказать обратный звонок</button>
+                    <form action="https://jsonplaceholder.typicode.com/posts" metod="POST" id="form" class="contact__form flex" autocomplete="off">
+                        <div class="form__box">
+                            <input class="contact__input" type="text" name="name" id="name" placeholder="Имя*">
+                        </div>
+                        <div class="form__box">
+                            <input class="contact__input" type="tel" name="tel" id="phone" placeholder="Телефон*">
+                        </div>
+                        <button type="submit" class="contact__btn btn-reset">Заказать обратный звонок</button>
                     </form>
+
+
+
                     <div class="social">
                         <p class="contact__strong">Связаться в один клик</p>
                         <ul class="social__icons list-reset flex">
@@ -853,6 +858,8 @@
 
     <script src="js/swiper-bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="js/inputmask.min.js"></script>
+    <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
     <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
     <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
