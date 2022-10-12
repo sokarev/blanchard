@@ -308,11 +308,11 @@ const im = new Inputmask("+7(999) 999-99-99");
 im.mask(selector);
 
 
+
+
+
 let validation = new JustValidate('#form', {
     errorFieldCssClass: 'is-invalid',
-    errorFieldStyle: {
-        border: '3px solid blue',
-    },
     errorLabelCssClass: 'is-label-invalid',
     errorLabelStyle: {
         color: '#D11616',
@@ -328,6 +328,7 @@ validation
             rule: 'required',
             errorMessage: 'Как вас зовут?',
         },
+
         {
             rule: 'minLength',
             value: 3,
@@ -339,9 +340,11 @@ validation
             errorMessage: 'Слишком длинное имя',
         },
     ])
+    .addField('#tel', [{
+        rule: 'required',
+        errorMessage: 'Укажите ваш телефон',
 
-
-.addField('#phone', [{
-    rule: 'required',
-    errorMessage: 'Укажите ваш телефон',
-}, ]);
+    }, ])
+    .onSuccess((event) => {
+        validation.form.submit();
+    });
