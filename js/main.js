@@ -332,7 +332,7 @@ validation
         {
             rule: 'minLength',
             value: 3,
-            errorMessage: 'Поле должно содержать не менее 3 символов',
+            errorMessage: 'Не менее 3 символов',
         },
         {
             rule: 'maxLength',
