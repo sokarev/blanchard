@@ -20,6 +20,11 @@ $(window).scroll(function() {
     }
 });
 
+document.querySelector(".burger").addEventListener("click", function() {
+    document.querySelector(".header__menu").classList.toggle("active");
+})
+
+
 const swiperHero = new Swiper('.hero__swiper', {
 
     slidesPerView: 1,
@@ -45,6 +50,7 @@ const swiperGallery = new Swiper('.gallery-container', {
     slidesPerView: 3,
     slidesPerGroup: 3,
     spaceBetween: 50,
+
     pagination: {
         el: ".gallery-pagination",
         type: 'fraction',
@@ -88,6 +94,28 @@ const swiperGallery = new Swiper('.gallery-container', {
                 el.style.marginTop = "";
             });
         }
+    },
+    breakpoints: {
+        // when window width is >= 320px
+        // 320: {
+        //     slidesPerView: 2,
+        //     spaceBetween: 20
+        // },
+        // when window width is >= 480px
+        // 480: {
+        //     slidesPerView: 3,
+        //     spaceBetween: 30
+        // },
+        // when window width is >= 640px
+        768: {
+            slidesPerView: 2,
+            spaceBetween: 40
+        },
+        1025: {
+            slidesPerView: 3,
+            slidesPerGroup: 3,
+            spaceBetween: 50,
+        },
     }
 
 });
@@ -102,11 +130,43 @@ const swiperEvent = new Swiper('.swiper-event', {
         nextEl: ".event__swiper-next",
         prevEl: ".event__swiper-prev"
     },
+    breakpoints: {
+        // when window width is >= 320px
+        // 320: {
+        //     slidesPerView: 2,
+        //     spaceBetween: 20
+        // },
+        // when window width is >= 480px
+        // 480: {
+        //     slidesPerView: 3,
+        //     spaceBetween: 30
+        // },
+        // when window width is >= 640px
+        768: {
+            // slidesPerView: 3,
+            slidesPerGroup: 3,
+
+            spaceBetween: 27,
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'bullets',
+                clickable: 'true',
+            },
+        },
+        1025: {
+            slidesPerView: 3,
+            slidesPerGroup: 1,
+            spaceBetween: 50,
+            a11y: true,
+            // pagination: enabled,
+        },
+    },
+
 
 });
 
 const swiperProject = new Swiper('.project__swiper', {
-    slidesPerView: 3,
+
     slidesPerGroup: 1,
     spaceBetween: 50,
     a11y: true,
@@ -115,6 +175,19 @@ const swiperProject = new Swiper('.project__swiper', {
         nextEl: ".project__btn-next",
         prevEl: ".project__btn-prev"
     },
+    breakpoints: {
+        769: {
+            slidesPerView: 2,
+            // slidesPerGroup: 1,
+
+            // spaceBetween: 27,
+
+        },
+        1025: {
+            slidesPerView: 3,
+        },
+    },
+
 
 });
 
@@ -308,11 +381,11 @@ const im = new Inputmask("+7(999) 999-99-99");
 im.mask(selector);
 
 
+
+
+
 let validation = new JustValidate('#form', {
     errorFieldCssClass: 'is-invalid',
-    errorFieldStyle: {
-        border: '3px solid blue',
-    },
     errorLabelCssClass: 'is-label-invalid',
     errorLabelStyle: {
         color: '#D11616',
@@ -328,10 +401,11 @@ validation
             rule: 'required',
             errorMessage: 'Как вас зовут?',
         },
+
         {
             rule: 'minLength',
             value: 3,
-            errorMessage: 'Поле должно содержать не менее 3 символов',
+            errorMessage: 'Не менее 3 символов',
         },
         {
             rule: 'maxLength',
@@ -339,9 +413,11 @@ validation
             errorMessage: 'Слишком длинное имя',
         },
     ])
+    .addField('#tel', [{
+        rule: 'required',
+        errorMessage: 'Укажите ваш телефон',
 
-
-.addField('#phone', [{
-    rule: 'required',
-    errorMessage: 'Укажите ваш телефон',
-}, ]);
+    }, ])
+    .onSuccess((event) => {
+        validation.form.submit();
+    });
