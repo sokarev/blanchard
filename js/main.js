@@ -21,8 +21,16 @@ $(window).scroll(function() {
 });
 
 document.querySelector(".burger").addEventListener("click", function() {
+    document.body.classList.toggle('lock');
     document.querySelector(".header__menu").classList.toggle("active");
 });
+document.querySelectorAll('.link').forEach(link => {
+    link.addEventListener('click', () => {
+        document.querySelector(".header__menu").classList.remove("active");
+        document.body.classList.remove('lock');
+
+    })
+})
 
 document.querySelector(".form__btn").addEventListener("click", function(e) {
     e.preventDefault();
