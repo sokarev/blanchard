@@ -12,8 +12,8 @@ for (let smoothLink of smoothLinks) {
 };
 
 $(window).scroll(function() {
-    if ($(this).scrollTop() > window.innerHeight * 0.75) {
-        $(".header").fadeIn();
+    if ($(this).scrollTop()) {
+        $(".header").fadeIn(1000);
         $(".header").addClass('fixed')
     } else {
         $(".header").removeClass('fixed')
@@ -22,8 +22,17 @@ $(window).scroll(function() {
 
 document.querySelector(".burger").addEventListener("click", function() {
     document.querySelector(".header__menu").classList.toggle("active");
-})
+});
 
+document.querySelector(".form__btn").addEventListener("click", function(e) {
+    e.preventDefault();
+    document.querySelector(".header__menu-container").classList.add("active");
+});
+
+document.querySelector(".form__btn-close").addEventListener("click", function(e) {
+    // e.preventDefault();
+    document.querySelector(".header__menu-container").classList.remove("active");
+});
 
 const swiperHero = new Swiper('.hero__swiper', {
 
@@ -97,18 +106,23 @@ const swiperGallery = new Swiper('.gallery-container', {
     },
     breakpoints: {
         // when window width is >= 320px
-        // 320: {
-        //     slidesPerView: 2,
-        //     spaceBetween: 20
-        // },
+        320: {
+            slidesPerView: 1,
+            slidesPerGroup: 1,
+            spaceBetween: 20
+        },
         // when window width is >= 480px
-        // 480: {
-        //     slidesPerView: 3,
-        //     spaceBetween: 30
-        // },
+        480: {
+            slidesPerView: 2,
+            slidesPerGroup: 1,
+
+            spaceBetween: 30
+        },
         // when window width is >= 640px
         768: {
             slidesPerView: 2,
+            slidesPerGroup: 1,
+
             spaceBetween: 40
         },
         1025: {
@@ -131,6 +145,18 @@ const swiperEvent = new Swiper('.swiper-event', {
         prevEl: ".event__swiper-prev"
     },
     breakpoints: {
+        320: {
+            slidesPerView: 1,
+            slidesPerGroup: 1,
+            spaceBetween: 20,
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'bullets',
+                clickable: 'true',
+            },
+        },
+
+
         // when window width is >= 320px
         // 320: {
         //     slidesPerView: 2,
@@ -142,7 +168,14 @@ const swiperEvent = new Swiper('.swiper-event', {
         //     spaceBetween: 30
         // },
         // when window width is >= 640px
-        768: {
+        576: {
+            slidesPerView: 2,
+            slidesPerGroup: 2,
+
+            spaceBetween: 32,
+
+        },
+        769: {
             // slidesPerView: 3,
             slidesPerGroup: 3,
 
@@ -158,6 +191,7 @@ const swiperEvent = new Swiper('.swiper-event', {
             slidesPerGroup: 1,
             spaceBetween: 50,
             a11y: true,
+
             // pagination: enabled,
         },
     },
@@ -176,6 +210,11 @@ const swiperProject = new Swiper('.project__swiper', {
         prevEl: ".project__btn-prev"
     },
     breakpoints: {
+        480: {
+            slidesPerView: 2,
+            spaceBetween: 34,
+        },
+
         769: {
             slidesPerView: 2,
             // slidesPerGroup: 1,
@@ -314,6 +353,7 @@ function init() {
             zoomControlFloat: "none",
             zoomControlPosition: { top: "270px", right: "20px" }
         }
+
     );
 
     myMap.behaviors.disable('scrollZoom');
@@ -323,13 +363,16 @@ function init() {
             iconLayout: "default#image",
             iconImageHref: "../img/ball.svg",
             iconImageSize: [20, 20],
-            iconImageOffset: [-20, -40],
+            iconImageOffset: [-10, -12],
         }
+
     );
 
     myMap.geoObjects.add(myPlacemark);
     myMap.container.fitToViewport();
 }
+
+
 
 let popup = document.querySelector('.popup');
 let openPopupButtons = document.querySelectorAll('.popup-link');

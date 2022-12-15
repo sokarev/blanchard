@@ -162,7 +162,7 @@ body {
 }
 
 .header.fixed .header__menu {
-    padding: 5px 0;
+    padding: 10px 0;
 }
 
 .header.fixed .header__submenu {
@@ -182,6 +182,7 @@ body {
 }
 
 .logo {
+    align-items: center;
     margin-right: 179px;
 }
 
@@ -267,6 +268,8 @@ body {
 }
 
 .form__top {
+    width: 29px;
+    transition: width .3s linear;
     display: none;
 }
 
@@ -1046,7 +1049,7 @@ body {
 .catalog__text {
     max-width: 1080px;
     margin: 0 0 39px;
-    font-size: 16px;
+    /* font-size: 16px; */
     line-height: 32px;
 }
 
@@ -1132,9 +1135,10 @@ body {
     background-color: var(--color-light-shade-purple-blue);
 }
 
-.catalog__list-item:hover+.catalog__list-item {
+
+/* .catalog__list-item:hover+.catalog__list-item {
     border-top: 1px solid var(--accent);
-}
+} */
 
 .catalog__list-item:nth-last-child(1):hover {
     border-bottom: 1px solid var(--color-shade-purple-blue);
@@ -1147,14 +1151,14 @@ body {
     overflow: hidden;
     padding: 0;
     line-height: 32px;
-    transition: opacity .5s linear, padding.5s linear;
+    transition: opacity .5s linear, padding .5s linear;
     display: grid;
     grid-template-columns: 256px 239px 180px;
     grid-template-rows: repeat(9, 32px);
     /* column-gap: 60px; */
     grid-auto-flow: column;
     /* grid-auto-rows: max-content; */
-    padding-left: 10px;
+    /* padding-left: 10px; */
 }
 
 .catalog__list-item.active .catalog__list-content {
@@ -1173,9 +1177,16 @@ body {
     transition: border-bottom .3s linear;
 }
 
-.catalog__list-item.active,
-.catalog__list-item.active+.catalog__list-item {
+.catalog__list-item.active
+/* ,
+.catalog__list-item.active+.catalog__list-item  */
+
+{
     border-top: 1px solid var(--color-shade-purple-blue);
+}
+
+.catalog__list-item.active .catalog__list-btn {
+    border-bottom: 1px solid var(--color-shade-purple-blue);
 }
 
 .catalog__list-btn {
@@ -1241,17 +1252,18 @@ body {
 .catalog__list-pattern {
     display: flex;
     margin-bottom: 37px;
-    padding-left: 10px;
+    /* padding-left: 10px; */
 }
 
 .catalog__list-item.active .catalog__nav-btn {
     background-color: var(--color-light-shade-purple-blue);
     outline: 2px solid var(--accent);
+    outline-offset: -2px;
 }
 
 .catalog__list-item.active .catalog__nav-btn::after {
     transform: rotate(135deg);
-    top: 21px;
+    /* top: 50%; */
 }
 
 .catalog__list-pic {
@@ -1554,6 +1566,10 @@ body {
     transition: border-bottom .3s linear;
 }
 
+.project__link-small {
+    display: none;
+}
+
 .project__link:focus:focus-within:focus-visible {
     color: var(--color-white);
 }
@@ -1584,7 +1600,7 @@ body {
 .project__swiper {
     overflow: hidden;
     max-width: 1450px;
-    margin: 0 30px;
+    /* margin: 0 30px; */
 }
 
 .project__slide {
@@ -1630,7 +1646,7 @@ body {
     transform: translateY(-50%);
     background-color: var(--color-light-shade-gray);
     transition: box-shadow .3s linear, background-color .3s linear;
-    z-index: 2;
+    z-index: 1;
 }
 
 .project__btn-next {
@@ -1713,7 +1729,8 @@ body {
 .contact__input {
     border: 1px solid var(--color-dark-shade-gray);
     border-radius: 100px;
-    width: 270px;
+    width: 100%;
+    min-width: 270px;
     padding: 15px 14px 15px 23px;
     /* margin-right: 20px; */
 }
@@ -1753,6 +1770,10 @@ body {
     background-color: var(--color-medium-light-shade-purple-blue);
 }
 
+.contact__btn-small {
+    display: none;
+}
+
 .address {
     line-height: 24px;
     font-style: normal;
@@ -1761,12 +1782,14 @@ body {
 .contact__form {
     width: 100%;
     max-width: 909px;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    gap: 20px;
 }
 
 .form__box {
     position: relative;
-    margin-right: 20px;
+    /* width: 100%; */
+    /* margin-right: 20px; */
 }
 
 .contact__strong {
@@ -1974,7 +1997,7 @@ body {
 .header__icon {
     width: 18px;
     height: 13px;
-    margin-right: 2px;
+    margin-right: 4px;
     fill: var(--color-white);
     transition: fill .2s linear;
     overflow: hidden;
@@ -2017,24 +2040,29 @@ body {
 
 .contact__map {
     margin: 0 auto;
-    position: relative;
-    min-height: 700px;
+    /* position: relative; */
+    height: 700px;
     width: 100%;
     /* max-width: 1920px; */
     /* width: calc(1920 / 1600 * 100% + ((100vw - 100%) / 2)); */
     /* 1078 - в данном случае это ширина карты внутри контейнера, её можно менять */
     /* margin-right: calc((-100vw + 100%) / 2); */
-    margin-top: -1px;
+    /* margin-top: -1px;
     transition-property: width, height, padding;
     transition-duration: 100ms;
 }
 
 .contact__map-wrap {
-    position: absolute;
+    /* height: 700px; */
+    /* position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
-    left: 0;
+    left: 0; */
+}
+
+.contact__map-wrap {
+    height: 700px;
 }
 
 [class*="ground-pane"] {
