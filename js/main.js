@@ -38,7 +38,6 @@ document.querySelector(".form__btn").addEventListener("click", function(e) {
 });
 
 document.querySelector(".form__btn-close").addEventListener("click", function(e) {
-    // e.preventDefault();
     document.querySelector(".header__menu-container").classList.remove("active");
 });
 
@@ -126,7 +125,7 @@ const swiperGallery = new Swiper('.gallery-container', {
 
             spaceBetween: 30
         },
-        // when window width is >= 640px
+        // when window width is >= 768px
         768: {
             slidesPerView: 2,
             slidesPerGroup: 1,
@@ -164,18 +163,6 @@ const swiperEvent = new Swiper('.swiper-event', {
             },
         },
 
-
-        // when window width is >= 320px
-        // 320: {
-        //     slidesPerView: 2,
-        //     spaceBetween: 20
-        // },
-        // when window width is >= 480px
-        // 480: {
-        //     slidesPerView: 3,
-        //     spaceBetween: 30
-        // },
-        // when window width is >= 640px
         576: {
             slidesPerView: 2,
             slidesPerGroup: 2,
@@ -184,7 +171,7 @@ const swiperEvent = new Swiper('.swiper-event', {
 
         },
         769: {
-            // slidesPerView: 3,
+
             slidesPerGroup: 3,
 
             spaceBetween: 27,
@@ -225,9 +212,7 @@ const swiperProject = new Swiper('.project__swiper', {
 
         769: {
             slidesPerView: 2,
-            // slidesPerGroup: 1,
 
-            // spaceBetween: 27,
 
         },
         1025: {
@@ -369,7 +354,7 @@ function init() {
     const myPlacemark = new ymaps.Placemark(
         [55.75846806898367, 37.60108849999989], {}, {
             iconLayout: "default#image",
-            iconImageHref: "../img/ball.svg",
+            iconImageHref: "img/ball.svg",
             iconImageSize: [20, 20],
             iconImageOffset: [-10, -12],
         }

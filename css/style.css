@@ -241,7 +241,6 @@ body.lock {
     transform: rotate(-45deg);
     top: 10px;
     width: 100%;
-    /* bottom: 21px; */
 }
 
 .header__menu.active .line {
@@ -249,11 +248,7 @@ body.lock {
 }
 
 .nav {
-    /* margin-right: auto;
- */
-    /* margin: 0 auto; */
     width: 100%;
-    /* justify-content: space-between; */
 }
 
 .nav__list {
@@ -563,7 +558,6 @@ body.lock {
     font-size: 72px;
     line-height: 96px;
     margin: 0;
-    /* margin-bottom: 19px; */
 }
 
 .hero__text {
@@ -585,7 +579,6 @@ body.lock {
     border-radius: 100px;
     padding: 23px 35px;
     align-self: flex-start;
-    /* margin-top: auto; */
     transition: box-shadow .2s linear, border .2s linear, background-color .2s linear;
     outline: none;
     position: relative;
@@ -800,7 +793,6 @@ body.lock {
 }
 
 .gallery-pagination {
-    /* margin-right: 10px; */
     text-align: center;
     color: #373850;
 }
@@ -825,11 +817,6 @@ body.lock {
     transform: rotate(45deg);
     transform-origin: center;
 }
-
-
-/* .gallery-prev {
-    margin-right: 10px;
-} */
 
 .gallery-navigation__btn {
     transition: background-color .3s linear;
@@ -1053,7 +1040,6 @@ body.lock {
 .catalog__text {
     max-width: 1080px;
     margin: 0 0 39px;
-    /* font-size: 16px; */
     line-height: 32px;
 }
 
@@ -1139,11 +1125,6 @@ body.lock {
     background-color: var(--color-light-shade-purple-blue);
 }
 
-
-/* .catalog__list-item:hover+.catalog__list-item {
-    border-top: 1px solid var(--accent);
-} */
-
 .catalog__list-item:nth-last-child(1):hover {
     border-bottom: 1px solid var(--color-shade-purple-blue);
 }
@@ -1159,10 +1140,7 @@ body.lock {
     display: grid;
     grid-template-columns: 256px 239px 180px;
     grid-template-rows: repeat(9, 32px);
-    /* column-gap: 60px; */
     grid-auto-flow: column;
-    /* grid-auto-rows: max-content; */
-    /* padding-left: 10px; */
 }
 
 .catalog__list-item.active .catalog__list-content {
@@ -1181,11 +1159,7 @@ body.lock {
     transition: border-bottom .3s linear;
 }
 
-.catalog__list-item.active
-/* ,
-.catalog__list-item.active+.catalog__list-item  */
-
-{
+.catalog__list-item.active {
     border-top: 1px solid var(--color-shade-purple-blue);
 }
 
@@ -1256,7 +1230,6 @@ body.lock {
 .catalog__list-pattern {
     display: flex;
     margin-bottom: 37px;
-    /* padding-left: 10px; */
 }
 
 .catalog__list-item.active .catalog__nav-btn {
@@ -1267,7 +1240,6 @@ body.lock {
 
 .catalog__list-item.active .catalog__nav-btn::after {
     transform: rotate(135deg);
-    /* top: 50%; */
 }
 
 .catalog__list-pic {
@@ -1604,7 +1576,6 @@ body.lock {
 .project__swiper {
     overflow: hidden;
     max-width: 1450px;
-    /* margin: 0 30px; */
 }
 
 .project__slide {
@@ -1736,7 +1707,6 @@ body.lock {
     width: 100%;
     min-width: 270px;
     padding: 15px 14px 15px 23px;
-    /* margin-right: 20px; */
 }
 
 .contact__input::placeholder {
@@ -1786,14 +1756,11 @@ body.lock {
 .contact__form {
     width: 100%;
     max-width: 909px;
-    /* justify-content: space-between; */
     gap: 20px;
 }
 
 .form__box {
     position: relative;
-    /* width: 100%; */
-    /* margin-right: 20px; */
 }
 
 .contact__strong {
@@ -1890,7 +1857,6 @@ body.lock {
 
 .popup__close {
     position: absolute;
-    /* content: ''; */
     right: 20px;
     top: 20px;
     font-size: 0;
@@ -1911,16 +1877,13 @@ body.lock {
 
 .popup__img {
     max-width: 400px;
-    /* width: 100%; */
     height: 100%;
 }
 
 .popup__box {
     padding: 50px;
-    /* max-width: 402px; */
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
     justify-content: center;
 }
 
@@ -1957,43 +1920,6 @@ body.lock {
     line-height: 22px;
     color: var(--color-dark-shade-gray);
 }
-
-
-/* 
-.catalog__list-btn::before {
-    content: "";
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    background-color: var(--color-light-shade-gray);
-    border-radius: 50%;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.catalog__list-btn::after {
-    content: "";
-    position: absolute;
-    width: 11.79px;
-    height: 11.79px;
-    transform: rotate(-45deg);
-    right: 19px;
-    top: 39px;
-    border-bottom: 1px solid var(--color-black);;
-    border-left: 1px solid var(--color-black);;
-} */
-
-
-/* .choices__list--dropdown .choices__item--selectable.is-highlighted,
-.choices__list[aria-expanded] .choices__item--selectable.is-highlighted {
-    background-color: rgba(255, 255, 255, .2);
-} */
-
-
-/* .choices__button {
-    background-color: var(--color-white);
-} */
 
 
 /* sprite  */
@@ -2044,25 +1970,8 @@ body.lock {
 
 .contact__map {
     margin: 0 auto;
-    /* position: relative; */
     height: 700px;
     width: 100%;
-    /* max-width: 1920px; */
-    /* width: calc(1920 / 1600 * 100% + ((100vw - 100%) / 2)); */
-    /* 1078 - в данном случае это ширина карты внутри контейнера, её можно менять */
-    /* margin-right: calc((-100vw + 100%) / 2); */
-    /* margin-top: -1px;
-    transition-property: width, height, padding;
-    transition-duration: 100ms;
-}
-
-.contact__map-wrap {
-    /* height: 700px; */
-    /* position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0; */
 }
 
 .contact__map-wrap {
