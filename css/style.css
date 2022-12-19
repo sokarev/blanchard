@@ -1955,7 +1955,7 @@ body.lock {
 }
 
 .social__link:active {
-    opacity: none;
+    opacity: 1;
     stroke: var(--accent);
 }
 
