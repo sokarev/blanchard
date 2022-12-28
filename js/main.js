@@ -315,19 +315,6 @@ document.querySelectorAll('.catalog__list-btn').forEach(function(trigger) {
     })
 });
 
-document.querySelector('.catalog__list-inner').addEventListener('click', (event) => {
-    let target = event.target;
-
-    if (target.classList.contains('menu__item')) {
-        for (let i = 0; i < menuItem.length; i++) {
-            // Убираем у других
-            parent.querySelectorAll('.catalog__list-item')[i].classList.remove('active');
-        }
-        // Добавляем тому на который нажали
-        target.classList.add('active');
-    }
-});
-
 ymaps.ready(init);
 
 function init() {
@@ -457,3 +444,9 @@ validation
     .onSuccess((event) => {
         validation.form.submit();
     });
+
+
+tippy('.project__icon', {
+    maxWidth: 264,
+    trigger: 'click'
+});
