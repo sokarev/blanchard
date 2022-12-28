@@ -1126,7 +1126,7 @@
             max-height: 0;
             opacity: 0;
             overflow: hidden;
-            transition: max-height .4s linear, opacity .4s linear;
+            transition: max-height 1s linear, opacity 1s linear;
         }
         
         .catalog__list-content {
@@ -1157,6 +1157,7 @@
         }
         
         .catalog__list-btn {
+            border-bottom: 0px solid transparent;
             transition: border-bottom .4s linear;
         }
         
