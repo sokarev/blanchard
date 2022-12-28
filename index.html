@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
     <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/media.css">
@@ -226,14 +227,14 @@
 
                         <div class="gallery__checkbox flex">
 
-                            <input type="checkbox" class="gallery__input" name="check" id="check1" tabindex="-1">
-                            <label for="check1" class="gallery__label" tabindex="0">XIX век</label>
+                            <input type="checkbox" class="gallery__input" name="check" id="check1">
+                            <label for="check1" class="gallery__label">XIX век</label>
 
-                            <input type="checkbox" class="gallery__input" name="check" id="check2" tabindex="-1">
-                            <label for="check2" class="gallery__label" tabindex="0">XX век</label>
+                            <input type="checkbox" class="gallery__input" name="check" id="check2">
+                            <label for="check2" class="gallery__label">XX век</label>
 
-                            <input type="checkbox" class="gallery__input" name="check" id="check3" tabindex="-1">
-                            <label for="check3" class="gallery__label" tabindex="0">Современность</label>
+                            <input type="checkbox" class="gallery__input" name="check" id="check3">
+                            <label for="check3" class="gallery__label">Современность</label>
 
                         </div>
                     </div>
@@ -397,94 +398,99 @@
                                     <span class="catalog__list-date">C 1400 по 1499 гг.</span> 
                                     <span class="nav-btn catalog__nav-btn"></span>
                                 </button>
-                                <ul class="catalog__list-content list-reset" tabindex="-1">
-                                    <li class="catalog__list-listing">
-                                        <button class="catalog__list-autor btn-reset wrappcolor" data-path="autor-none">Бенедетто ди Биндо</button>
-                                    </li>
-                                    <li class="catalog__list-listing">
-                                        <button class="catalog__list-autor btn-reset wrappcolor" data-path="autor-none">Бергоньоне, Амброджо</button>
-                                    </li>
-                                    <li class="catalog__list-listing">
-                                        <button class="catalog__list-autor btn-reset wrappcolor" data-path="autor-none">Биссоло, Франческо</button>
-                                    </li>
-                                    <li class="catalog__list-listing">
-                                        <button class="catalog__list-autor btn-reset wrappcolor" data-path="autor-none">Больтраффио, Джованни</button></li>
-                                    <li class="catalog__list-listing">
-                                        <button class="catalog__list-autor btn-reset wrappcolor" data-path="autor-none">Бонсиньори, Франческо</button></li>
-                                    <li class="catalog__list-listing">
-                                        <button class="catalog__list-autor btn-reset wrappcolor" data-path="autor-none">Боттичини, Рафаэлло</button></li>
-                                    <li class="catalog__list-listing">
-                                        <button class="catalog__list-autor btn-reset wrappcolor" data-path="autor-none">Брамантино</button>
-                                    </li>
-                                    <li class="catalog__list-listing">
-                                        <button class="catalog__list-autor btn-reset wrappcolor" data-path="autor-none">Бреа, Людовико</button>
-                                    </li>
-                                    <li class="catalog__list-listing">
-                                        <button class="catalog__list-autor btn-reset wrappcolor" data-path="autor-none">Бьяджо д’Антонио Туччи</button>
-                                    </li>
-                                    <li class="catalog__list-listing">
-                                        <button class="catalog__list-autor btn-reset wrappcolor" data-path="autor-none">Веккьетта</button>
-                                    </li>
-                                    <li class="catalog__list-listing">
-                                        <button class="catalog__list-autor btn-reset wrappcolor" data-path="autor-none">Андреа Верроккьо</button>
-                                    </li>
-                                    <li class="catalog__list-listing">
-                                        <button class="catalog__list-autor catalog__list-autor--active btn-reset wrappcolor" data-path="girlandaio">Доменико Гирландайо</button>
-                                    </li>
-                                    <li class="catalog__list-listing">
-                                        <button class="catalog__list-autor btn-reset wrappcolor" data-path="autor-none">Беноццо Гоццоли</button>
-                                    </li>
-                                    <li class="catalog__list-listing">
-                                        <button class="catalog__list-autor btn-reset wrappcolor" data-path="autor-none">Граначчи, Франческо</button>
-                                    </li>
-                                    <li class="catalog__list-listing">
-                                        <button class="catalog__list-autor btn-reset wrappcolor" data-path="autor-none">Грегорио ди Чекко</button>
-                                    </li>
-                                    <li class="catalog__list-listing">
-                                        <button class="catalog__list-autor btn-reset wrappcolor" data-path="autor-none">Джованни да Удине</button>
-                                    </li>
-                                    <li class="catalog__list-listing">
-                                        <button class="catalog__list-autor btn-reset wrappcolor" data-path="autor-none">Джованни ди Паоло</button>
-                                    </li>
-                                    <li class="catalog__list-listing">
-                                        <button class="catalog__list-autor btn-reset wrappcolor" data-path="autor-none">Джорджоне</button>
-                                    </li>
-                                    <li class="catalog__list-listing">
-                                        <button class="catalog__list-autor btn-reset wrappcolor" data-path="autor-none">Парентино, Бернардо</button>
-                                    </li>
-                                    <li class="catalog__list-listing">
-                                        <button class="catalog__list-autor btn-reset wrappcolor" data-path="autor-none">Пезеллино</button>
-                                    </li>
-                                    <li class="catalog__list-listing">
-                                        <button class="catalog__list-autor btn-reset wrappcolor" data-path="autor-none">Пьетро Перуджино</button>
-                                    </li>
-                                    <li class="catalog__list-listing">
-                                        <button class="catalog__list-autor btn-reset wrappcolor" data-path="autor-none">Перуцци, Бальдассаре</button>
-                                    </li>
-                                    <li class="catalog__list-listing">
-                                        <button class="catalog__list-autor btn-reset wrappcolor" data-path="autor-none">Пизанелло</button>
-                                    </li>
-                                    <li class="catalog__list-listing">
-                                        <button class="catalog__list-autor btn-reset wrappcolor" data-path="autor-none">Пинтуриккьо</button>
-                                    </li>
+                                <div class="catalog__list-container">
+                                    <ul class="catalog__list-content list-reset" tabindex="-1">
+                                        <li class="catalog__list-listing">
+                                            <button class="catalog__list-autor btn-reset wrappcolor" data-path="autor-none">Бенедетто ди Биндо</button>
+                                        </li>
+                                        <li class="catalog__list-listing">
+                                            <button class="catalog__list-autor btn-reset wrappcolor" data-path="autor-none">Бергоньоне, Амброджо</button>
+                                        </li>
+                                        <li class="catalog__list-listing">
+                                            <button class="catalog__list-autor btn-reset wrappcolor" data-path="autor-none">Биссоло, Франческо</button>
+                                        </li>
+                                        <li class="catalog__list-listing">
+                                            <button class="catalog__list-autor btn-reset wrappcolor" data-path="autor-none">Больтраффио, Джованни</button></li>
+                                        <li class="catalog__list-listing">
+                                            <button class="catalog__list-autor btn-reset wrappcolor" data-path="autor-none">Бонсиньори, Франческо</button></li>
+                                        <li class="catalog__list-listing">
+                                            <button class="catalog__list-autor btn-reset wrappcolor" data-path="autor-none">Боттичини, Рафаэлло</button></li>
+                                        <li class="catalog__list-listing">
+                                            <button class="catalog__list-autor btn-reset wrappcolor" data-path="autor-none">Брамантино</button>
+                                        </li>
+                                        <li class="catalog__list-listing">
+                                            <button class="catalog__list-autor btn-reset wrappcolor" data-path="autor-none">Бреа, Людовико</button>
+                                        </li>
+                                        <li class="catalog__list-listing">
+                                            <button class="catalog__list-autor btn-reset wrappcolor" data-path="autor-none">Бьяджо д’Антонио Туччи</button>
+                                        </li>
+                                        <li class="catalog__list-listing">
+                                            <button class="catalog__list-autor btn-reset wrappcolor" data-path="autor-none">Веккьетта</button>
+                                        </li>
+                                        <li class="catalog__list-listing">
+                                            <button class="catalog__list-autor btn-reset wrappcolor" data-path="autor-none">Андреа Верроккьо</button>
+                                        </li>
+                                        <li class="catalog__list-listing">
+                                            <button class="catalog__list-autor catalog__list-autor--active btn-reset wrappcolor" data-path="girlandaio">Доменико Гирландайо</button>
+                                        </li>
+                                        <li class="catalog__list-listing">
+                                            <button class="catalog__list-autor btn-reset wrappcolor" data-path="autor-none">Беноццо Гоццоли</button>
+                                        </li>
+                                        <li class="catalog__list-listing">
+                                            <button class="catalog__list-autor btn-reset wrappcolor" data-path="autor-none">Граначчи, Франческо</button>
+                                        </li>
+                                        <li class="catalog__list-listing">
+                                            <button class="catalog__list-autor btn-reset wrappcolor" data-path="autor-none">Грегорио ди Чекко</button>
+                                        </li>
+                                        <li class="catalog__list-listing">
+                                            <button class="catalog__list-autor btn-reset wrappcolor" data-path="autor-none">Джованни да Удине</button>
+                                        </li>
+                                        <li class="catalog__list-listing">
+                                            <button class="catalog__list-autor btn-reset wrappcolor" data-path="autor-none">Джованни ди Паоло</button>
+                                        </li>
+                                        <li class="catalog__list-listing">
+                                            <button class="catalog__list-autor btn-reset wrappcolor" data-path="autor-none">Джорджоне</button>
+                                        </li>
+                                        <li class="catalog__list-listing">
+                                            <button class="catalog__list-autor btn-reset wrappcolor" data-path="autor-none">Парентино, Бернардо</button>
+                                        </li>
+                                        <li class="catalog__list-listing">
+                                            <button class="catalog__list-autor btn-reset wrappcolor" data-path="autor-none">Пезеллино</button>
+                                        </li>
+                                        <li class="catalog__list-listing">
+                                            <button class="catalog__list-autor btn-reset wrappcolor" data-path="autor-none">Пьетро Перуджино</button>
+                                        </li>
+                                        <li class="catalog__list-listing">
+                                            <button class="catalog__list-autor btn-reset wrappcolor" data-path="autor-none">Перуцци, Бальдассаре</button>
+                                        </li>
+                                        <li class="catalog__list-listing">
+                                            <button class="catalog__list-autor btn-reset wrappcolor" data-path="autor-none">Пизанелло</button>
+                                        </li>
+                                        <li class="catalog__list-listing">
+                                            <button class="catalog__list-autor btn-reset wrappcolor" data-path="autor-none">Пинтуриккьо</button>
+                                        </li>
 
 
 
-                                </ul>
+                                    </ul>
+                                </div>
                             </li>
                             <li class="catalog__list-item">
                                 <button class="catalog__list-btn btn-reset">
                                     <span class="catalog__list-date"> C 1500 по 1599 гг.</span> 
-                                    <span class="nav-btn catalog__nav-btn"></span></button>
-                                <div class="catalog__list-content catalog__list-pattern">
-                                    <div class="catalog__list-pic">
+                                    <span class="nav-btn catalog__nav-btn"></span>
+                                </button>
+                                <div class="catalog__list-container">
+                                    <div class="catalog__list-content catalog__list-pattern">
+                                        <div class="catalog__list-pic">
 
-                                    </div>
-                                    <div class="catalog__list-box">
-                                        <span class="catalog__list-title">Здесь пока пусто</span>
-                                        <p class="catalog__list-text">А в галерее вы всегда можете найти что-то интересное для себя</p>
-                                        <a href="" class="catalog__list-link wrappcolor">В галерею</a>
+                                        </div>
+                                        <div class="catalog__list-box">
+                                            <span class="catalog__list-title">Здесь пока пусто</span>
+                                            <p class="catalog__list-text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                                            <a href="" class="catalog__list-link wrappcolor">В галерею</a>
 
+                                        </div>
                                     </div>
                                 </div>
                             </li>
@@ -493,12 +499,14 @@
                                     <span class="catalog__list-date">C 1600 по 1699 гг.</span>
                                     <span class="nav-btn catalog__nav-btn"></span>
                                 </button>
-                                <div class="catalog__list-content catalog__list-pattern">
-                                    <div class="catalog__list-pic"></div>
-                                    <div class="catalog__list-box">
-                                        <span class="catalog__list-title">Здесь пока пусто</span>
-                                        <p class="catalog__list-text">А в галерее вы всегда можете найти что-то интересное для себя</p>
-                                        <a href="" class="catalog__list-link">В галерею</a>
+                                <div class="catalog__list-container">
+                                    <div class="catalog__list-content catalog__list-pattern">
+                                        <div class="catalog__list-pic"></div>
+                                        <div class="catalog__list-box">
+                                            <span class="catalog__list-title">Здесь пока пусто</span>
+                                            <p class="catalog__list-text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                                            <a href="" class="catalog__list-link">В галерею</a>
+                                        </div>
                                     </div>
                                 </div>
                             </li>
@@ -507,26 +515,31 @@
                                     <span class="catalog__list-date">C 1700 по 1799 гг.</span>
                                     <span class="nav-btn catalog__nav-btn"></span>
                                 </button>
-                                <div class="catalog__list-content catalog__list-pattern">
-                                    <div class="catalog__list-pic"></div>
-                                    <div class="catalog__list-box">
-                                        <span class="catalog__list-title">Здесь пока пусто</span>
-                                        <p class="catalog__list-text">А в галерее вы всегда можете найти что-то интересное для себя</p>
-                                        <a href="" class="catalog__list-link">В галерею</a>
+                                <div class="catalog__list-container">
+                                    <div class="catalog__list-content catalog__list-pattern">
+                                        <div class="catalog__list-pic"></div>
+                                        <div class="catalog__list-box">
+                                            <span class="catalog__list-title">Здесь пока пусто</span>
+                                            <p class="catalog__list-text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                                            <a href="" class="catalog__list-link">В галерею</a>
+                                        </div>
                                     </div>
                                 </div>
+
                             </li>
                             <li class="catalog__list-item">
                                 <button class="catalog__list-btn btn-reset"> 
                                     <span class="catalog__list-date">C 1800 по 1899 гг.</span>
                                     <span class="nav-btn catalog__nav-btn"></span>
                                 </button>
-                                <div class="catalog__list-content catalog__list-pattern">
-                                    <div class="catalog__list-pic"></div>
-                                    <div class="catalog__list-box">
-                                        <span class="catalog__list-title">Здесь пока пусто</span>
-                                        <p class="catalog__list-text">А в галерее вы всегда можете найти что-то интересное для себя</p>
-                                        <a href="" class="catalog__list-link">В галерею</a>
+                                <div class="catalog__list-container">
+                                    <div class="catalog__list-content catalog__list-pattern">
+                                        <div class="catalog__list-pic"></div>
+                                        <div class="catalog__list-box">
+                                            <span class="catalog__list-title">Здесь пока пусто</span>
+                                            <p class="catalog__list-text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                                            <a href="" class="catalog__list-link">В галерею</a>
+                                        </div>
                                     </div>
                                 </div>
                             </li>
@@ -535,27 +548,33 @@
                                     <span class="catalog__list-date">C 1900 по 1999 гг.</span>
                                     <span class="nav-btn catalog__nav-btn"></span>
                                 </button>
-                                <div class="catalog__list-content catalog__list-pattern">
-                                    <div class="catalog__list-pic"></div>
-                                    <div class="catalog__list-box">
-                                        <span class="catalog__list-title">Здесь пока пусто</span>
-                                        <p class="catalog__list-text">А в галерее вы всегда можете найти что-то интересное для себя</p>
-                                        <a href="" class="catalog__list-link">В галерею</a>
+                                <div class="catalog__list-container">
+                                    <div class="catalog__list-content catalog__list-pattern">
+                                        <div class="catalog__list-pic"></div>
+                                        <div class="catalog__list-box">
+                                            <span class="catalog__list-title">Здесь пока пусто</span>
+                                            <p class="catalog__list-text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                                            <a href="" class="catalog__list-link">В галерею</a>
+                                        </div>
                                     </div>
                                 </div>
+
                             </li>
                             <li class="catalog__list-item">
                                 <button class="catalog__list-btn btn-reset">
                                     <span class="catalog__list-date">C 2000 г.</span>
                                     <span class="nav-btn catalog__nav-btn"></span>
                                 </button>
-                                <div class="catalog__list-content catalog__list-pattern">
-                                    <div class="catalog__list-pic"></div>
-                                    <div class="catalog__list-box">
-                                        <span class="catalog__list-title">Здесь пока пусто</span>
-                                        <p class="catalog__list-text">А в галерее вы всегда можете найти что-то интересное для себя</p>
-                                        <a href="" class="catalog__list-link">В галерею</a>
+                                <div class="catalog__list-container">
+                                    <div class="catalog__list-content catalog__list-pattern">
+                                        <div class="catalog__list-pic"></div>
+                                        <div class="catalog__list-box">
+                                            <span class="catalog__list-title">Здесь пока пусто</span>
+                                            <p class="catalog__list-text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                                            <a href="" class="catalog__list-link">В галерею</a>
+                                        </div>
                                     </div>
+
                                 </div>
                             </li>
                         </ul>
@@ -686,33 +705,24 @@
                 <div class="project__text">
                     Предварительные выводы: постоянное информационно-пропагандистское обеспечение нашей деятельности однозначно фиксирует необходимость своевременного выполнения сверхзадачи. А&nbsp;ещё независимые государства смешаны с&nbsp;не&nbsp;уникальными данными до&nbsp;степени
                     совершённой неузнаваемости, из-за чего возрастает их&nbsp;статус бесполезности. Прежде всего, постоянное информационно-пропагандистское
-                    <div class="project__tooltip" tabindex="0">
-                        <svg class="project__icon">
+
+                    <svg class="project__icon" data-tippy-content="Пример современных тенденций - современная методология разработки" tabindex='0'>
                         <use xlink:href="img/sprite.svg#tooltip"></use>
-                      </svg>
-                        <span class="project__tooltiptext">Пример современных тенденций - современная методология разработки 
-                       </span>
-                    </div>
-                    обеспечение нашей деятельности однозначно фиксирует необходимость экономической целесообразности принимаемых решений. И&nbsp;нет сомнений, что действия представителей оппозиции могут быть рассмотрены
-                    <div class="project__tooltip" tabindex="0">
-                        <svg class="project__icon">
+                      </svg> обеспечение нашей деятельности однозначно фиксирует необходимость экономической целесообразности принимаемых решений. И&nbsp;нет сомнений, что действия представителей оппозиции могут быть рассмотрены
+
+                    <svg class="project__icon" data-tippy-content="Приятно, граждане, наблюдать, как сделанные на базе аналитики выводы вызывают у вас эмоции">
                         <use xlink:href="img/sprite.svg#tooltip"></use>
-                      </svg>
-                        <span class="project__tooltiptext">Приятно, граждане, наблюдать, как сделанные на базе аналитики выводы вызывают у вас эмоции  
-                        </span>
-                    </div>
-                    исключительно в&nbsp;разрезе маркетинговых и&nbsp;финансовых
-                    <div class="project__tooltip" tabindex="0">
-                        <svg class="project__icon">
+                      </svg> исключительно в&nbsp;разрезе маркетинговых и&nbsp;финансовых
+
+                    <svg class="project__icon" data-tippy-content="В стремлении повысить качество">
                         <use xlink:href="img/sprite.svg#tooltip"></use>
-                      </svg>
-                        <span class="project__tooltiptext">В стремлении повысить качество </span>
-                    </div>
-                    предпосылок. Банальные, но&nbsp;неопровержимые выводы, а&nbsp;также представители современных социальных резервов призывают нас к&nbsp;новым свершениям, которые, в&nbsp;свою очередь, должны быть смешаны с&nbsp;не&nbsp;уникальными данными до&nbsp;степени
-                    совершённой неузнаваемости. Подробнее:
+                      </svg> предпосылок. Банальные, но&nbsp;неопровержимые выводы, а&nbsp;также представители современных социальных резервов призывают нас к&nbsp;новым свершениям, которые, в&nbsp;свою очередь, должны быть смешаны
+                    с&nbsp;не&nbsp;уникальными данными до&nbsp;степени совершённой неузнаваемости. Подробнее:
                     <a class="project__link project__link-big wrappcolor" href="#">blanchard-art.ru/projects</a>
                     <a class="project__link project__link-small wrappcolor" href="#">blanchard-art.ru</a>
                 </div>
+
+
                 <span class="project__partners"> Партнёры проектов: </span>
                 <div class="project__object flex">
                     <div class="project__swiper">
@@ -831,6 +841,8 @@
     <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
     <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU">
     </script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
     <script src="js/main.js"></script>
 </body>
 

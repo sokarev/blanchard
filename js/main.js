@@ -315,18 +315,51 @@ document.querySelectorAll('.catalog__list-btn').forEach(function(trigger) {
     })
 });
 
-document.querySelector('.catalog__list-inner').addEventListener('click', (event) => {
-    let target = event.target;
+// document.querySelector('.catalog__list-inner').addEventListener('click', (event) => {
+//     const box = document.querySelector('.catalog__list-item');
+//     let target = event.target;
 
-    if (target.classList.contains('menu__item')) {
-        for (let i = 0; i < menuItem.length; i++) {
-            // Убираем у других
-            parent.querySelectorAll('.catalog__list-item')[i].classList.remove('active');
-        }
-        // Добавляем тому на который нажали
-        target.classList.add('active');
-    }
-});
+//     if (target.classList.contains('active')) {
+//         for (let i = 0; i < menuItem.length; i++) {
+//             // Убираем у других
+//             parent.querySelectorAll('box')[i].classList.remove('active');
+//         }
+//         // Добавляем тому на который нажали
+
+//         target.classList.add('active');
+//         let currentContent = document.querySelector('.catalog__list-container')
+//         if (parent.querySelectorAll('box').classList.contains('active')) {
+//             box.style.maxHeight = currentContent.scrollmaxHeight + "px";
+//         }
+//     } else {
+//         currentContent.style.maxHeight = 0;
+//     }
+
+// });
+
+// const boxes = Array.from(document.querySelectorAll(".catalog__list-container")); // считываем все элементы аккордеона в массив
+
+// boxes.forEach((box) => {
+//     box.addEventListener("click", boxHandler); // при нажатии на бокс вызываем ф-ию boxHanlder
+// });
+
+// function boxHandler(e) {
+//     e.preventDefault(); // сбрасываем стандартное поведение
+//     let currentBox = e.target.closest(".catalog__list-container"); // определяем текущий бокс
+//     let currentContent = e.target.nextElementSibling; // находим скрытый контент
+//     currentBox.classList.toggle("active"); // присваиваем ему активный класс
+//     if (currentBox.classList.contains("active")) {
+//         // если класс активный ..
+//         currentContent.style.maxHeight = currentContent.scrollHeight + "px"; // открываем контент
+//     } else {
+//         // в противном случае
+//         currentContent.style.maxHeight = 0; // скрываем контент
+//     }
+// }
+
+
+
+
 
 ymaps.ready(init);
 
@@ -457,3 +490,9 @@ validation
     .onSuccess((event) => {
         validation.form.submit();
     });
+
+
+tippy('.project__icon', {
+    maxWidth: 264,
+    trigger: 'click'
+});
